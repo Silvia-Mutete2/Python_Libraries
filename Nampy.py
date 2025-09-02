@@ -36,4 +36,10 @@ def calculate_hypotenuse(a, b):
     return math.hypot(a, b)
 print(calculate_hypotenuse(3, 4))
 
+#Creating a 2D array
+def create_2d_array(rows, cols):
+    """Creates a 2D numpy array with given number of rows and columns."""
+    return np.zeros((rows, cols))
+print(create_2d_array(3, 4))
+
 

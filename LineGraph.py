@@ -32,6 +32,17 @@ plt.legend()
 # Add grid lines for easier reading, like guides on a map
 plt.grid(True, linestyle='--', alpha=0.7)
 
+# Set y-axis limits to focus on the relevant data range
+plt.ylim(0, 90000)
+
+# Scatter points to highlight actual data values
+plt.scatter(x, y1, color='blue')
+plt.scatter(x, y2, color='orange')
+
+
 # Display the final plot
 plt.tight_layout() # Ensures everything fits nicely
-plt.show()
+plt.show() 
+
+# Save the plot as an image file
+plt.savefig('harvest_yield_comparison.png', dpi=300) # dpi is the

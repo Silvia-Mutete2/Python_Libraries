@@ -9,3 +9,22 @@ print(df)
 
 # Calculate the average age of the village
 print(f"\nThe average age is: {df['Age'].mean()} winters")
+
+# Add a new column for occupation
+df['Occupation'] = ['Farmer', 'Blacksmith', 'Doctor']
+print("\nUpdated Table with Occupation:")
+print(df)
+
+# Filter the adults older than 28 
+adults = df[df['Age'] > 28]
+print("\nAdults older than 28:")
+print(adults)
+
+#Sort the table by age
+sorted_df = df.sort_values(by='Age')
+print("\nTable sorted by Age:")
+print(sorted_df)
+
+# Save the table to a CSV file for future generations
+df.to_csv('village_data.csv', index=False)
+print("\nData saved to village_data.csv")
